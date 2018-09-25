@@ -146,6 +146,7 @@
       $('.dropdown-menu').on('mousedown', $.proxy(this.scrollSafety, this));
 
       this.shown = true;
+	  this.$source.addClass("combobox-menu-visible");
       return this;
     }
 
@@ -154,6 +155,7 @@
       $('.dropdown-menu').off('mousedown', $.proxy(this.scrollSafety, this));
       this.$element.on('blur', $.proxy(this.blur, this));
       this.shown = false;
+	  this.$source.removeClass("combobox-menu-visible");
       return this;
     }
 
