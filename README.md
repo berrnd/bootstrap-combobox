@@ -1,5 +1,14 @@
 # Bootstrap Combobox
 
+-----
+-----
+> [!NOTE]
+> This is my personal fork of [danielfarrell/bootstrap-combobox](https://github.com/danielfarrell/bootstrap-combobox), which I use in some of my hobby projects (e.g. [Grocy](https://grocy.info)) with a few individual fixes and/or customizations.
+-----
+-----
+
+<details><summary>Original README</summary>
+
 We had need of a combobox at work and after looking around at the available options I was not happy with any of them.  The project had all it's styling based on Twitter's Bootstrap, so building on that made sense.
 
 ## How to install it
@@ -97,3 +106,4 @@ http://bootstrap-combobox-test.herokuapp.com/
 ## License
 
 Licensed under the Apache License, Version 2.0
+</details>

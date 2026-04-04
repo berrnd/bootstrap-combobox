@@ -148,6 +148,7 @@
       $('.dropdown-menu').on('mousedown', $.proxy(this.scrollSafety, this));
 
       this.shown = true;
+	  this.$source.addClass("combobox-menu-visible");
       return this;
     }
 
@@ -156,6 +157,7 @@
       $('.dropdown-menu').off('mousedown', $.proxy(this.scrollSafety, this));
       this.$element.on('blur', $.proxy(this.blur, this));
       this.shown = false;
+	  this.$source.removeClass("combobox-menu-visible");
       return this;
     }
 
@@ -185,6 +187,8 @@
         return '<div class="combobox-container"><input type="hidden" /> <div class="input-append"> <input type="text" autocomplete="off" /> <span class="add-on dropdown-toggle" data-dropdown="dropdown"> <span class="caret pulldown" style="vertical-align: middle"/> <i class="icon-remove remove"/> </span> </div> </div>'
       } else if (this.options.bsVersion == '3') {
         return '<div class="combobox-container"> <input type="hidden" /> <div class="input-group"> <input type="text" autocomplete="off" /> <span class="input-group-addon dropdown-toggle" data-dropdown="dropdown"> <span class="caret pulldown" /> <span class="glyphicon glyphicon-remove remove" /> </span> </div> </div>'
+      } else if (this.options.bsVersion == '4') {
+        return '<div class="combobox-container"> <input type="hidden" /> <div class="input-group"> <input type="text" autocomplete="off" /> <div class="input-group-append"> <span class="input-group-text dropdown-toggle" data-toggle="dropdown"></span> </div> </div>'
       } else {
         return '<div class="combobox-container"> <input type="hidden" /> <div class="input-group"> <input type="text" autocomplete="off" />'
           + '<span class="input-group-append"' + (hasPopper ? ' data-toggle="dropdown" data-reference="parent"' : '') + '>'
